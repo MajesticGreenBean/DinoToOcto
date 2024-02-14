@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffc0cb;
+}
+
+.nickname-box {
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.poem {
+  float: left;
+  width: 100%;
+  margin-left: 28%;
+  margin-top: 7%;
+  font-size: 24px;
+}
+
+.user-input {
+  background-color: rgba(0,0,0,0);
+  border: 10px #FF3659 solid;
+  padding: 8px;
+  border-radius: 88px;
+  width: 100%;
+  text-indent: 3%;
+  font-size: 32px;
+}
+
+.input-label {
+  color: #FF3659;
+  background-color: #ffc0cb;
+  font-size: 28px;
+  font-weight: bold;
+  position: relative;
+  top: 1.2vh;
+  left: 21vh;
+  padding: 0 8px;
+}
+
+.funny-medias {
+  /*float: left;*/
+  /*width: 100%;*/
+  /*margin-left: 10%;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nonClickByDefault {
+  pointer-events: none;
+  cursor: default;
+}
+
+.clickable {
+  pointer-events: auto;
+}

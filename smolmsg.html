@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Luv u Octopus</title>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <div class="message">
+      <h1>
+        Will You Be My Valentine?
+      </h1>
+    </div>
+    <div class="buttons">
+      <button class="y-button" id="yb">Yes</button>
+      <button class="n-button" id="nb">No</button>
+    </div>
+    <div class="love-counter">
+      <h2>Love Count: <span class="loveCounterText" id="loveCounterText">0</span>
+      </h2>
+    </div>
+    <div class="funny-medias">
+      <img 
+        class="doggo-photo"
+        src="dog.gif"
+        alt="dog-static.jpeg"/>
+      <img 
+        class="doggo-photo"
+        src="dog.gif"
+        alt="dog-static.jpeg"/>
+      <img 
+        class="doggo-photo"
+        src="dog.gif"
+        alt="dog-static.jpeg"/>
+      <img 
+        class="doggo-photo"
+        src="dog.gif"
+        alt="dog-static.jpeg"/>
+      <img 
+        class="doggo-photo"
+        src="dog.gif"
+        alt="dog-static.jpeg"/>
+      <img 
+        class="doggo-photo"
+        src="dog.gif"
+        alt="dog-static.jpeg"/>
+    </div>
+    <script type="text/javascript">
+      const nbtn = document.querySelector(".n-button");
+      const ybtn = document.querySelector(".y-button");
+      let loveCounter = 0;
+      nbtn.addEventListener("click", function() {
+        const newText = document.createElement("span");
+        newText.innerHTML = "<h2>Try that again</h2>";
+        document.querySelector(".buttons").replaceChild(newText, nbtn);
+      });
+      ybtn.addEventListener("click", function() {
+        loveCounter++;
+        if(loveCounter >= 30) {
+          window.location = "poem.html"
+        }
+        document.querySelector("#loveCounterText").innerHTML = loveCounter;
+        var divsize = 69;
+        var posx = (Math.random() * document.body.clientWidth - divsize).toFixed();
+        var posy = (Math.random() * document.body.clientHeight - divsize).toFixed();
+        const newHeart = document.createElement("div");
+        newHeart.textContent = "Love u!";
+        newHeart.style.color = "white";
+        newHeart.style.position="absolute";
+        newHeart.style.left = posx+"px";
+        if(Math.round(Math.random())) {
+          newHeart.style.top = posy+"px";
+        } else {
+          newHeart.style.top = "-"+posy+"px";
+        }
+        document.body.appendChild(newHeart);
+      });
+    </script>
+  </body>
+</html>
